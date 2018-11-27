@@ -54,9 +54,9 @@ android {
             proguardFiles(getDefaultProguardFile("proguard-android.txt"), "proguard-rules.pro")
         }
 
-        applicationVariants.all(object : Action<ApplicationVariant> {
+        applicationVariants.all(object: Action < ApplicationVariant > {
             override fun execute(variant: ApplicationVariant) {
-                variant.outputs.all(object : Action<BaseVariantOutput> {
+                variant.outputs.all(object: Action < BaseVariantOutput > {
                     override fun execute(output: BaseVariantOutput) {
                         val outputImpl = output as BaseVariantOutputImpl
                         val fileName = "${variant.name.capitalize()}-$versionName.apk"
