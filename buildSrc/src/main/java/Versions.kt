@@ -9,7 +9,7 @@ object Versions {
 
     /*Kotlin*/
     const val kotlinVersion = "1.3.10"
-    const val kotlinCoroutines = "1.0.0"
+    const val kotlinCoroutines = "1.0.1"
 
     /*Android X*/
     const val gradlePluginVersion = "3.2.1"
