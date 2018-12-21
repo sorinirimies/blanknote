@@ -19,9 +19,7 @@ class NotesFragment : Fragment() {
     override fun onCreateView(
             inflater: LayoutInflater, container: ViewGroup?,
             savedInstanceState: Bundle?
-    ): View? {
-        return inflater.inflate(R.layout.notes_fragment, container, false)
-    }
+    ): View? = inflater.inflate(R.layout.notes_fragment, container, false)
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
@@ -44,5 +42,4 @@ class NotesFragment : Fragment() {
         fun newInstance() = NotesFragment()
         const val TAG_NOTES = "notes-fragment"
     }
-
 }

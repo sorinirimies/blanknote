@@ -106,14 +106,11 @@ dependencies {
     }
 
     /*Jwt*/
-    api("io.jsonwebtoken:jjwt-api:0.10.5")
+    implementation("io.jsonwebtoken:jjwt-api:0.10.5")
     runtimeOnly("io.jsonwebtoken:jjwt-impl:0.10.5")
     runtimeOnly("io.jsonwebtoken:jjwt-orgjson:0.10.5") {
         exclude(group = "org.json", module = "json") //provided by Android natively
     }
-
-    /*C.I.*/
-    implementation(Depends.Kotlin.coroutines)
 
     /*Tests*/
     androidTestImplementation(Depends.TestLibraries.jUnitRunner)
