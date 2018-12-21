@@ -20,7 +20,6 @@ class NotesFragment : Fragment() {
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
         viewModel = ViewModelProviders.of(this).get(NotesViewModel::class.java)
-        // TODO: Use the ViewModel
     }
 
     companion object {
