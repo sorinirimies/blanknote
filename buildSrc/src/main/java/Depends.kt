@@ -39,6 +39,7 @@ object Depends {
     }
 
     object Network {
+        const val moshi = "com.squareup.moshi:moshi:1.8.0"
         const val retrofit2 = "com.squareup.retrofit2:retrofit:${Versions.retrofit2Version}"
         const val retrofit2CoroutinesAdapter =
             "com.jakewharton.retrofit:retrofit2-kotlin-coroutines-adapter:${Versions.retrofit2CorutinesAdapter}"

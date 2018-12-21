@@ -8,7 +8,7 @@ object Versions {
     }
 
     /*Kotlin*/
-    const val kotlinVersion = "1.3.10"
+    const val kotlinVersion = "1.3.11"
     const val kotlinCoroutines = "1.0.1"
 
     /*Android X*/
