@@ -16,14 +16,14 @@ class MainActivity : AppCompatActivity() {
             when (it.itemId) {
                 R.id.action_notes -> supportFragmentManager.transaction {
                     replace(
-                        R.id.frag_container,
+                        R.id.fragContainer,
                         NotesFragment.newInstance(),
                         NotesFragment.TAG_NOTES
                     )
                 }
                 R.id.action_user_settings -> supportFragmentManager.transaction {
                     replace(
-                        R.id.frag_container, UserFragment.newInstance(),
+                        R.id.fragContainer, UserFragment.newInstance(),
                         UserFragment.TAG_USER
                     )
                 }
