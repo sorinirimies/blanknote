@@ -14,7 +14,7 @@ class UserViewModel : ViewModel(), CoroutineScope {
 
     val notes = MutableLiveData<List<Note>>()
 
-    
+
     fun getUser(id: String) = launch {
         withContext(Dispatchers.IO) {
             try {
