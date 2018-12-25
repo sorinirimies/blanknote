@@ -8,13 +8,13 @@ import kotlinx.coroutines.Job
 import kotlinx.coroutines.launch
 import ro.sorin.blanknote.api.NotesApi
 import ro.sorin.blanknote.model.Note
-import ro.sorin.blanknote.retrofit
+import ro.sorin.blanknote.utils.retrofit
 
 
 class NotesViewModel : ViewModel(), CoroutineScope {
 
     internal val notesLiveData: MutableLiveData<List<Note>> = MutableLiveData()
-    private val notesService = retrofit.create(NotesApi::class.java)
+    private val notesService by lazy { retrofit.create(NotesApi::class.java) }
     private val job = Job()
     override val coroutineContext = job + Dispatchers.Main
 

@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
@@ -28,14 +29,20 @@ class NotesFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        viewModel.notesLiveData.observe(this, Observer<List<Note>> { notes ->
+            notesAdapter.addItems(notes)
+        })
         rvNotes.apply {
             layoutManager = LinearLayoutManager(activity)
             adapter = notesAdapter
         }
-        val notesObserver = Observer<List<Note>> { notes ->
-            notesAdapter.addItems(notes)
+        swipeRefreshLayout.apply {
+            setColorSchemeColors(
+                    ContextCompat.getColor(context, R.color.colorPrimary),
+                    ContextCompat.getColor(context, R.color.colorAccent)
+            )
+            setOnRefreshListener { viewModel.getNotes() }
         }
-        viewModel.notesLiveData.observe(this, notesObserver)
     }
 
     companion object {
