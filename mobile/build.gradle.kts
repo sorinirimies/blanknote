@@ -106,7 +106,7 @@ dependencies {
     }
 
     /*Utils*/
-    implementation ("com.sorinirimies:kotlin-ext:1.1.3")
+    implementation ("com.sorinirimies:kotlin-ext:1.0.0")
     /*Jwt*/
     implementation("io.jsonwebtoken:jjwt-api:0.10.5")
     runtimeOnly("io.jsonwebtoken:jjwt-impl:0.10.5")
