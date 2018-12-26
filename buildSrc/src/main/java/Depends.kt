@@ -9,9 +9,9 @@ object Depends {
         const val supportAnnotations = "androidx.annotation:annotation:${Versions.androidSupportVersion}"
         const val supportAppCompat = "androidx.appcompat:appcompat:${Versions.androidSupportVersion}"
         const val lifecycleExt =
-            "androidx.lifecycle:lifecycle-extensions:${Versions.lifecycleVersion}"
+                "androidx.lifecycle:lifecycle-extensions:${Versions.lifecycleVersion}"
         const val lifecycleRuntime =
-            "androidx.lifecycle:lifecycle-runtime:${Versions.lifecycleVersion}"
+                "androidx.lifecycle:lifecycle-runtime:${Versions.lifecycleVersion}"
         const val ktxCore = "androidx.core:core-ktx:${Versions.ktxVersion}"
         const val ktxFragment = "androidx.fragment:fragment-ktx:${Versions.ktxVersion}"
         const val material = " com.google.android.material:material:${Versions.androidMaterialVersion}"
@@ -21,6 +21,13 @@ object Depends {
     object CI {
         const val appCenterAnalytics = "com.microsoft.appcenter:appcenter-analytics:${Versions.appCenterVersion}"
         const val appCenterCrashes = "com.microsoft.appcenter:appcenter-crashes:${Versions.appCenterVersion}"
+    }
+
+    object Room {
+        const val roomRuntime = "androidx.room:room-runtime:${Versions.roomVersion}"
+        const val roomCompiler = "androidx.room:room-compiler:${Versions.roomVersion}"
+        const val roomCoroutines = "androidx.room:room-coroutines:${Versions.roomVersion}"
+        const val roomTest = "androidx.room:room-testing:${Versions.roomVersion}"
     }
 
     object Kotlin {
@@ -42,7 +49,7 @@ object Depends {
         const val moshi = "com.squareup.moshi:moshi:1.8.0"
         const val retrofit2 = "com.squareup.retrofit2:retrofit:${Versions.retrofit2Version}"
         const val retrofit2CoroutinesAdapter =
-            "com.jakewharton.retrofit:retrofit2-kotlin-coroutines-adapter:${Versions.retrofit2CorutinesAdapter}"
+                "com.jakewharton.retrofit:retrofit2-kotlin-coroutines-adapter:${Versions.retrofit2CorutinesAdapter}"
     }
 
     object TestLibraries {

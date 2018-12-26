@@ -24,7 +24,10 @@ object Versions {
     const val fireaAuthVersion = "16.0.5"
     const val fireStoreVersion = "17.1.2"
 
-    /* C.I.*/
+    /*Room*/
+    const val roomVersion = "2.1.0-alpha03"
+
+    /*C.I.*/
     const val appCenterVersion = "1.10.0"
 
     /*User Auth*/
