@@ -9,6 +9,7 @@ import com.android.build.gradle.internal.api.BaseVariantOutputImpl
 plugins {
     id("com.android.application")
     id("kotlin-android")
+    id("org.jetbrains.kotlin.kapt")
     id("kotlin-android-extensions")
 }
 
@@ -66,6 +67,8 @@ android {
             }
         })
     }
+
+    androidExtensions { isExperimental = true }
 }
 
 dependencies {
@@ -105,8 +108,14 @@ dependencies {
         isTransitive = true
     }
 
+    /*Room*/
+    implementation(Depends.Room.roomRuntime)
+    implementation(Depends.Room.roomCompiler)
+    implementation(Depends.Room.roomCoroutines)
+
     /*Utils*/
-    implementation ("com.sorinirimies:kotlin-ext:1.0.0")
+    implementation("com.sorinirimies:kotlin-ext:1.0.0")
+
     /*Jwt*/
     implementation("io.jsonwebtoken:jjwt-api:0.10.5")
     runtimeOnly("io.jsonwebtoken:jjwt-impl:0.10.5")
@@ -118,4 +127,6 @@ dependencies {
     androidTestImplementation(Depends.TestLibraries.jUnitRunner)
     androidTestImplementation(Depends.TestLibraries.espressoCore)
     testImplementation(Depends.TestLibraries.jUnit)
+    testImplementation(Depends.Room.roomTest)
+
 }
