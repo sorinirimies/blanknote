@@ -3,8 +3,7 @@ package ro.sorin.blanknote.api
 import kotlinx.coroutines.Deferred
 import retrofit2.http.*
 import ro.sorin.blanknote.model.Note
-import ro.sorin.blanknote.model.OutOfFoodItem
-import ro.sorin.blanknote.model.OutOfFoodItemRequest
+import ro.sorin.blanknote.model.OutOfFoodRequest
 
 interface NotesApi {
 
@@ -15,8 +14,8 @@ interface NotesApi {
     suspend fun getNote(@Path("id") id: String): Deferred<Note>
 
     @POST("note")
-    suspend fun addNote(@Body outOfFoodItem: OutOfFoodItemRequest): Deferred<Note>
+    suspend fun addNote(@Body outOfFood: OutOfFoodRequest): Deferred<Note>
 
     @PUT("note/{id}")
-    suspend fun updateNote(@Body outOfFoodItem: OutOfFoodItemRequest, @Path("id") id: String): Deferred<Note>
+    suspend fun updateNote(@Body outOfFood: OutOfFoodRequest, @Path("id") id: String): Deferred<Note>
 }

@@ -10,5 +10,5 @@ import com.squareup.moshi.JsonClass
 data class OutOfFoodList(@PrimaryKey(autoGenerate = true) var uid: Long = 0,
                          @ColumnInfo(name = "list_name") var listName: String?,
                          @ColumnInfo(name = "list_description") var listDescription: String?,
-                         @ColumnInfo(name = "items") var items: List<OutOfFoodItem>
+                         @ColumnInfo(name = "items") var items: List<OutOfFood>
 )
