@@ -12,8 +12,8 @@ interface NotesDao {
     @Query("SELECT * FROM note")
     fun getAll(): List<Note>
 
-    @Query("SELECT * FROM note WHERE uid IN (:uids)")
-    fun loadAllByIds(uids: IntArray): List<Note>
+    @Query("SELECT * FROM note WHERE id IN (:ids)")
+    fun loadAllByIds(ids: IntArray): List<Note>
 
     @Query("SELECT * FROM note WHERE content LIKE :contentName  LIMIT 1")
     fun findByName(contentName: String): Note

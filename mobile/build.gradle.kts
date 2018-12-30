@@ -84,6 +84,7 @@ dependencies {
     implementation(Depends.Android.supportAppCompat)
     implementation(Depends.Android.supportAnnotations)
     implementation("com.android.support:design:28.0.0") //TODO this needs to be migrated
+    implementation("com.android.support:preference-v7:28.0.0")
     implementation(Depends.Android.lifecycleExt)
     implementation(Depends.Android.lifecycleRuntime)
     implementation(Depends.Android.ktxCore)
@@ -110,7 +111,7 @@ dependencies {
 
     /*Room*/
     implementation(Depends.Room.roomRuntime)
-    implementation(Depends.Room.roomCompiler)
+    kapt(Depends.Room.roomCompiler)
     implementation(Depends.Room.roomCoroutines)
 
     /*Utils*/

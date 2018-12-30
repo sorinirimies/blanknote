@@ -5,17 +5,19 @@ import retrofit2.http.*
 import ro.sorin.blanknote.model.Note
 import ro.sorin.blanknote.model.OutOfFoodRequest
 
+const val notesEndpoint = "notes"
+
 interface NotesApi {
 
-    @GET("note")
+    @GET(notesEndpoint)
     suspend fun getNotes(@Query("userId") userId: String? = null): Deferred<List<Note>>
 
-    @GET("note/{id}")
+    @GET("$notesEndpoint/{id}")
     suspend fun getNote(@Path("id") id: String): Deferred<Note>
 
-    @POST("note")
+    @POST(notesEndpoint)
     suspend fun addNote(@Body outOfFood: OutOfFoodRequest): Deferred<Note>
 
-    @PUT("note/{id}")
+    @PUT("$notesEndpoint/{id}")
     suspend fun updateNote(@Body outOfFood: OutOfFoodRequest, @Path("id") id: String): Deferred<Note>
 }

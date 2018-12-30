@@ -6,12 +6,12 @@ import com.microsoft.appcenter.AppCenter
 import com.microsoft.appcenter.analytics.Analytics
 import com.microsoft.appcenter.crashes.Crashes
 import ro.sorin.blanknote.db.NotesDb
-import ro.sorin.blanknote.db.OutOfFoodDb
+import ro.sorin.blanknote.db.ShoppingListDb
 
 class BlanknoteApp : Application() {
 
     lateinit var notesDb: NotesDb
-    lateinit var outOfFoodDb: OutOfFoodDb
+    lateinit var shoppingListDb: ShoppingListDb
 
     override fun onCreate() {
         super.onCreate()
@@ -29,9 +29,9 @@ class BlanknoteApp : Application() {
                 "notes")
                 .build()
 
-        outOfFoodDb = Room.databaseBuilder(
+        shoppingListDb = Room.databaseBuilder(
                 applicationContext,
-                OutOfFoodDb::class.java,
+                ShoppingListDb::class.java,
                 "outOfFood")
                 .build()
 

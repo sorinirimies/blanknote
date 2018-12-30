@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.transaction
 import kotlinx.android.synthetic.main.activity_main.*
 import ro.sorin.blanknote.ui.notes.NotesFragment
+import ro.sorin.blanknote.ui.settings.SettingsFragment
 import ro.sorin.blanknote.ui.user.UserFragment
 
 class MainActivity : AppCompatActivity() {
@@ -21,11 +22,14 @@ class MainActivity : AppCompatActivity() {
                         NotesFragment.TAG_NOTES
                     )
                 }
-                R.id.action_user_settings -> supportFragmentManager.transaction {
+                R.id.action_user -> supportFragmentManager.transaction {
                     replace(
                         R.id.frag_container, UserFragment.newInstance(),
                         UserFragment.TAG_USER
                     )
+                }
+                R.id.action_settings -> supportFragmentManager.transaction {
+                    replace(R.id.frag_container, SettingsFragment())
                 }
             }
             return@setOnNavigationItemSelectedListener true

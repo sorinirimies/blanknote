@@ -52,7 +52,7 @@ class NotesAdapter : RecyclerView.Adapter<NotesAdapter.BlankNoteViewHolder>() {
     inner class BlankNoteViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         private val messageText: TextView = view.tvNoteContent
         fun bind(note: Note) {
-            messageText.text = note.name
+            messageText.text = note.content
         }
     }
 }
