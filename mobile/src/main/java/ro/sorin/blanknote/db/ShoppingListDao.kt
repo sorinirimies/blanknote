@@ -1,30 +1,36 @@
 package ro.sorin.blanknote.db
 
-import androidx.room.Dao
-import androidx.room.Delete
-import androidx.room.Insert
-import androidx.room.Query
+import androidx.lifecycle.LiveData
+import androidx.room.*
 import ro.sorin.blanknote.model.ShoppingItem
 import ro.sorin.blanknote.model.ShoppingList
+import ro.sorin.blanknote.model.ShoppingListListWithItems
 
 @Dao
 interface ShoppingListDao {
 
     @Query("SELECT * FROM shopping_list")
-    fun getAllShoppingLists(): List<ShoppingList>
+    fun getAllShoppingLists(): LiveData<List<ShoppingList>>
 
+    @Transaction
     @Query("SELECT * FROM shoppingitem WHERE shoppingListId = :shoppingListId")
-    fun getAllShoppingItems(shoppingListId: Long): List<ShoppingItem>
+    fun getShoppingItemsFromList(shoppingListId: Long): LiveData<List<ShoppingListListWithItems>>
 
     @Query("SELECT * FROM shopping_list WHERE id IN (:uids)")
-    fun loadAllByIds(uids: IntArray): List<ShoppingItem>
+    fun loadAllByIds(uids: IntArray): LiveData<List<ShoppingItem>>
 
     @Query("SELECT * FROM shopping_list WHERE list_name LIKE :listName  LIMIT 1")
-    fun findByName(listName: String): ShoppingList
+    fun findByName(listName: String): LiveData<ShoppingList>
+
+    @Insert
+    fun insertShoppingList(shoppingList: ShoppingList)
 
     @Insert
     fun insertAll(vararg shoppingList: ShoppingList)
 
     @Delete
-    fun delete(shoppingList: ShoppingList)
+    fun deleteShoppingList(shoppingList: ShoppingList)
+
+    @Delete
+    fun deleteShoppingItem(shoppingItem: ShoppingItem)
 }
