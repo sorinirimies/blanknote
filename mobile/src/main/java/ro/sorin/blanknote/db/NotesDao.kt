@@ -1,5 +1,6 @@
 package ro.sorin.blanknote.db
 
+import androidx.lifecycle.LiveData
 import androidx.room.Dao
 import androidx.room.Delete
 import androidx.room.Insert
@@ -10,13 +11,13 @@ import ro.sorin.blanknote.model.Note
 interface NotesDao {
 
     @Query("SELECT * FROM note")
-    fun getAll(): List<Note>
+    fun getAll(): LiveData<List<Note>>
 
     @Query("SELECT * FROM note WHERE id IN (:ids)")
-    fun loadAllByIds(ids: IntArray): List<Note>
+    fun loadAllByIds(ids: IntArray): LiveData<List<Note>>
 
     @Query("SELECT * FROM note WHERE content LIKE :contentName  LIMIT 1")
-    fun findByName(contentName: String): Note
+    fun findByName(contentName: String): LiveData<Note>
 
     @Insert
     fun insertAll(vararg note: Note)
