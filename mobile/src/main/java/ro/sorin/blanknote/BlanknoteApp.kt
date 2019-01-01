@@ -10,8 +10,10 @@ import ro.sorin.blanknote.db.ShoppingListDb
 
 class BlanknoteApp : Application() {
 
-    lateinit var notesDb: NotesDb
-    lateinit var shoppingListDb: ShoppingListDb
+    companion object {
+        lateinit var notesDb: NotesDb
+        lateinit var shoppingListDb: ShoppingListDb
+    }
 
     override fun onCreate() {
         super.onCreate()
@@ -32,7 +34,7 @@ class BlanknoteApp : Application() {
         shoppingListDb = Room.databaseBuilder(
                 applicationContext,
                 ShoppingListDb::class.java,
-                "outOfFood")
+                "shoppingList")
                 .build()
 
     }
