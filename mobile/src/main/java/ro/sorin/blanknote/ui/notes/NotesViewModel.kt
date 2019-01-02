@@ -8,6 +8,7 @@ import kotlinx.coroutines.Job
 import kotlinx.coroutines.launch
 import ro.sorin.blanknote.api.NotesApi
 import ro.sorin.blanknote.model.Note
+import ro.sorin.blanknote.utils.notesRepository
 import ro.sorin.blanknote.utils.retrofit
 
 
@@ -18,7 +19,7 @@ class NotesViewModel : ViewModel(), CoroutineScope {
     private val job = Job()
     override val coroutineContext = job + Dispatchers.Main
 
-    fun getNotes() {
+    fun syncNotesWithCloud() {
         launch {
             try {
                 val notes = notesService.getNotes().await()
@@ -31,8 +32,24 @@ class NotesViewModel : ViewModel(), CoroutineScope {
         }
     }
 
+    fun getNotes() = notesRepository.getNotes()
+
+    fun addNote(note: Note) {
+        launch { notesRepository.addNote(note) }
+    }
+
     override fun onCleared() {
         super.onCleared()
         job.cancel()
+    }
+
+    fun deleteNote(note: Note) {
+        launch {
+            try {
+                notesRepository.removeNote(note)
+            } catch(e: Exception){
+
+            }
+        }
     }
 }
