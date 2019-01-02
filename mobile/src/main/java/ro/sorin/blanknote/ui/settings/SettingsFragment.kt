@@ -10,7 +10,7 @@ const val TAG_SETTINGS = "settings-fragment"
 
 class SettingsFragment : PreferenceFragmentCompat(), SharedPreferences.OnSharedPreferenceChangeListener {
 
-    override fun onCreatePreferences(savedInstanceState: Bundle, rootKey: String) {
+    override fun onCreatePreferences(savedInstanceState: Bundle?, rootKey: String?) {
         setPreferencesFromResource(R.xml.preferences, rootKey)
         val sharedPreferences = PreferenceManager.getDefaultSharedPreferences(context)
     }
