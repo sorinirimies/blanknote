@@ -1,17 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <array name="environments" translatable="false">
-        <item>@array/dev</item>
-        <item>@array/prod</item>
+    <array name="environment_keys" translatable="false">
+        <item>@string/env_dev</item>
+        <item>@string/env_prod</item>
     </array>
-
-    <array name="dev" translatable="false">
-        <item>Blanknote Dev</item>
+    <array name="environment_values" translatable="false">
+        <item>https://blanknote.dev.servehttp.com/</item>
         <item>https://blanknote.servehttp.com/</item>
     </array>
 
-    <array name="prod" translatable="false">
-        <item>Blanknote Prod</item>
-        <item>https://blanknote.servehttp.com/</item>
-    </array>
 </resources>

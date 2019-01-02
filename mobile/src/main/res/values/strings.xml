@@ -5,8 +5,23 @@
     <string name="settings">Settings</string>
     <string name="sync_settings">Sync preferences</string>
     <string name="notes">Notes</string>
-    <string name="keep_lists_synced">Keep_lists_synced</string>
+    <string name="keep_lists_synced">Keep lists synced</string>
     <string name="title_enable_suggestions">Enable suggestions</string>
     <string name="environments">Environments</string>
     <string name="notification_settings">Notification preferences</string>
+    <string name="new_group_name">Please name your new shopping list.</string>
+    <string name="new_note_name">Write something nice</string>
+    <string name="new_note">New note</string>
+    <string name="add_note">Add note</string>
+    <string name="cancel">Cancel</string>
+    <string name="delete_note_label">Are you sure you want to delete it?</string>
+    <string name="delete_note">Delete</string>
+    <string name="edit_note_label">Change your mind.</string>
+    <string name="edit_note">Change</string>
+    <string name="switch_environments">Switch environments</string>
+    <string name="switch_environments_summary">Through the developer options you can switch the
+        environments
+    </string>
+    <string name="env_dev">Dev</string>
+    <string name="env_prod">Prod</string>
 </resources>

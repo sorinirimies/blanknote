@@ -1,4 +1,4 @@
-package ro.sorin.blanknote.model
+package ro.sorin.blanknote.model.converter
 
 import androidx.room.TypeConverter
 import java.util.*

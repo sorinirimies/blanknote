@@ -16,6 +16,7 @@
         app:title="@string/sync_settings">
 
         <SwitchPreferenceCompat
+            app:defaultValue=""
             app:key="switch_sync_lists_preference"
             app:title="@string/keep_lists_synced" />
 
@@ -35,6 +36,14 @@
     <PreferenceCategory
         app:key="developer_settings_category"
         app:title="Developer Settings">
+
+        <ListPreference
+            app:dialogTitle="@string/switch_environments"
+            app:entries="@array/environment_keys"
+            app:entryValues="@array/environment_values"
+            app:key="switch_environments_preference"
+            app:summary="@string/switch_environments_summary"
+            app:title="@string/switch_environments" />
 
     </PreferenceCategory>
 
