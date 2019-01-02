@@ -17,25 +17,22 @@ class BlanknoteApp : Application() {
 
     override fun onCreate() {
         super.onCreate()
-
         AppCenter.start(
                 this,
                 this.resources.getString(R.string.app_center_id),
                 Analytics::class.java,
                 Crashes::class.java
         )
-
         notesDb = Room.databaseBuilder(
                 applicationContext,
                 NotesDb::class.java,
                 "notes")
                 .build()
-
         shoppingListDb = Room.databaseBuilder(
                 applicationContext,
                 ShoppingListDb::class.java,
                 "shoppingList")
                 .build()
-
     }
+
 }
