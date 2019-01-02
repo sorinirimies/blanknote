@@ -2,9 +2,9 @@ package ro.sorin.blanknote.db
 
 import androidx.lifecycle.LiveData
 import androidx.room.*
+import androidx.room.OnConflictStrategy.REPLACE
 import ro.sorin.blanknote.model.ShoppingItem
 import ro.sorin.blanknote.model.ShoppingList
-import ro.sorin.blanknote.model.ShoppingListListWithItems
 
 @Dao
 interface ShoppingListDao {
@@ -12,21 +12,23 @@ interface ShoppingListDao {
     @Query("SELECT * FROM shopping_list")
     fun getAllShoppingLists(): LiveData<List<ShoppingList>>
 
-    @Transaction
-    @Query("SELECT * FROM shoppingitem WHERE shoppingListId = :shoppingListId")
-    fun getShoppingItemsFromList(shoppingListId: Long): LiveData<List<ShoppingListListWithItems>>
+    @Query("SELECT * FROM ShoppingItem WHERE id = :shoppingListId")
+    fun getShoppingItems(shoppingListId: Long): LiveData<List<ShoppingItem>>
 
-    @Query("SELECT * FROM shopping_list WHERE id IN (:uids)")
-    fun loadAllByIds(uids: IntArray): LiveData<List<ShoppingItem>>
+    @Query("SELECT * FROM shopping_list WHERE id IN (:ids)")
+    fun loadAllShoppingListsByIds(ids: IntArray): LiveData<List<ShoppingList>>
 
-    @Query("SELECT * FROM shopping_list WHERE list_name LIKE :listName  LIMIT 1")
+    @Query("SELECT * FROM shopping_list WHERE name LIKE :listName  LIMIT 1")
     fun findByName(listName: String): LiveData<ShoppingList>
 
-    @Insert
+    @Insert(onConflict = REPLACE)
+    fun insertShoppingItem(shoppingItem: ShoppingItem)
+
+    @Insert(onConflict = REPLACE)
     fun insertShoppingList(shoppingList: ShoppingList)
 
-    @Insert
-    fun insertAll(vararg shoppingList: ShoppingList)
+    @Insert(onConflict = REPLACE)
+    fun insertShoppingLists(vararg shoppingList: ShoppingList)
 
     @Delete
     fun deleteShoppingList(shoppingList: ShoppingList)

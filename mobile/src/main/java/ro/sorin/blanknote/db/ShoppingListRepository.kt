@@ -13,9 +13,15 @@ class ShoppingListRepository constructor(private val shoppingListDao: ShoppingLi
         }
     }
 
+    suspend fun addShoppingItem(shoppingItem: ShoppingItem){
+        withContext(IO){
+            shoppingListDao.insertShoppingItem(shoppingItem)
+        }
+    }
+
     fun getShoppingLists() = shoppingListDao.getAllShoppingLists()
 
-    fun getShoppingItems(shoppingListId: Long) = shoppingListDao.getShoppingItemsFromList(shoppingListId)
+    fun getShoppingItems(shoppingListId: Long) = shoppingListDao.getShoppingItems(shoppingListId)
 
     suspend fun removeShoppingList(shoppingList: ShoppingList) = withContext(IO) {
         shoppingListDao

@@ -5,7 +5,9 @@ import androidx.room.RoomDatabase
 import ro.sorin.blanknote.model.ShoppingItem
 import ro.sorin.blanknote.model.ShoppingList
 
-@Database(entities = [ShoppingList::class, ShoppingItem::class], version = 1, exportSchema = false)
+@Database(entities = [ShoppingList::class, ShoppingItem::class],
+        version = 1,
+        exportSchema = false)
 abstract class ShoppingListDb : RoomDatabase() {
-    abstract fun outOfFoodListDao(): ShoppingListDao
+    abstract fun shoppingListDao(): ShoppingListDao
 }
