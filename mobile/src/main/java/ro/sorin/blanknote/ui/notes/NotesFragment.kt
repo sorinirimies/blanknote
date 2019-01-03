@@ -78,7 +78,6 @@ class NotesFragment : Fragment() {
         setNegativeButton(R.string.cancel) { _, _ -> }
     }
 
-
     private fun showAddNoteDialog() = alertDialog(requireContext()) {
         val v = layoutInflater.init(R.layout.dialog_create_note)
         setView(v)
