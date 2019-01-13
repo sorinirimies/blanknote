@@ -114,6 +114,9 @@ dependencies {
     kapt(Depends.Room.roomCompiler)
     implementation(Depends.Room.roomCoroutines)
 
+    /*Logs*/
+    implementation ("com.jakewharton.timber:timber:4.7.1")
+
     /*Utils*/
     implementation("com.sorinirimies:kotlin-ext:1.0.0")
 

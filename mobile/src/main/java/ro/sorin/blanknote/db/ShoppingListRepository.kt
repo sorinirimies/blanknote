@@ -12,7 +12,7 @@ class ShoppingListRepository constructor(private val shoppingListDao: ShoppingLi
             shoppingListDao.insertShoppingList(shoppingList)
         }
     }
-
+    
     suspend fun addShoppingItem(shoppingItem: ShoppingItem){
         withContext(IO){
             shoppingListDao.insertShoppingItem(shoppingItem)
@@ -24,8 +24,7 @@ class ShoppingListRepository constructor(private val shoppingListDao: ShoppingLi
     fun getShoppingItems(shoppingListId: Long) = shoppingListDao.getShoppingItems(shoppingListId)
 
     suspend fun removeShoppingList(shoppingList: ShoppingList) = withContext(IO) {
-        shoppingListDao
-                .deleteShoppingList(shoppingList)
+        shoppingListDao.deleteShoppingList(shoppingList)
     }
 
     suspend fun removeShoppingItem(shoppingItem: ShoppingItem) = withContext(IO) {

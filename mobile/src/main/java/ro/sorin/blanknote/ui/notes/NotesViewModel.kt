@@ -1,23 +1,19 @@
 package ro.sorin.blanknote.ui.notes
 
+import android.util.Log
 import androidx.lifecycle.MutableLiveData
-import androidx.lifecycle.ViewModel
-import kotlinx.coroutines.CoroutineScope
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.Job
 import kotlinx.coroutines.launch
 import ro.sorin.blanknote.api.NotesApi
 import ro.sorin.blanknote.model.Note
+import ro.sorin.blanknote.utils.CoroutineViewModel
 import ro.sorin.blanknote.utils.notesRepository
 import ro.sorin.blanknote.utils.retrofit
 
 
-class NotesViewModel : ViewModel(), CoroutineScope {
+class NotesViewModel : CoroutineViewModel() {
 
     internal val notesLiveData: MutableLiveData<List<Note>> = MutableLiveData()
-    private val notesService by lazy { retrofit.create(NotesApi::class.java) }
-    private val job = Job()
-    override val coroutineContext = job + Dispatchers.Main
+    private val notesService by lazy(LazyThreadSafetyMode.NONE) { retrofit.create(NotesApi::class.java) }
 
     fun syncNotesWithCloud() {
         launch {
@@ -38,16 +34,11 @@ class NotesViewModel : ViewModel(), CoroutineScope {
         launch { notesRepository.addNote(note) }
     }
 
-    override fun onCleared() {
-        super.onCleared()
-        job.cancel()
-    }
-
     fun deleteNote(note: Note) {
         launch {
             try {
                 notesRepository.removeNote(note)
-            } catch(e: Exception){
+            } catch (e: Exception) {
 
             }
         }

@@ -10,13 +10,13 @@
     <string name="environments">Environments</string>
     <string name="notification_settings">Notification preferences</string>
     <string name="new_group_name">Please name your new shopping list.</string>
-    <string name="new_note_name">Write something nice</string>
+    <string name="new_note_name">Write something nice...</string>
     <string name="new_note">New note</string>
     <string name="add_note">Add note</string>
     <string name="cancel">Cancel</string>
     <string name="delete_note_label">Are you sure you want to delete it?</string>
     <string name="delete_note">Delete</string>
-    <string name="edit_note_label">Change your mind.</string>
+    <string name="edit_note_label">Changed your mind ?</string>
     <string name="edit_note">Change</string>
     <string name="switch_environments">Switch environments</string>
     <string name="switch_environments_summary">Through the developer options you can switch the

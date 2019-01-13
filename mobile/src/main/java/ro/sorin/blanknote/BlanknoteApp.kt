@@ -1,6 +1,7 @@
 package ro.sorin.blanknote
 
 import android.app.Application
+import android.util.Log
 import androidx.room.Room
 import com.microsoft.appcenter.AppCenter
 import com.microsoft.appcenter.analytics.Analytics
@@ -17,6 +18,7 @@ class BlanknoteApp : Application() {
 
     override fun onCreate() {
         super.onCreate()
+        if (BuildConfig.DEBUG)
         AppCenter.start(
                 this,
                 this.resources.getString(R.string.app_center_id),
