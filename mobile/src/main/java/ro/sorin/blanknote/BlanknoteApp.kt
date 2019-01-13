@@ -1,13 +1,13 @@
 package ro.sorin.blanknote
 
 import android.app.Application
-import android.util.Log
 import androidx.room.Room
 import com.microsoft.appcenter.AppCenter
 import com.microsoft.appcenter.analytics.Analytics
 import com.microsoft.appcenter.crashes.Crashes
 import ro.sorin.blanknote.db.NotesDb
 import ro.sorin.blanknote.db.ShoppingListDb
+import timber.log.Timber
 
 class BlanknoteApp : Application() {
 
@@ -18,7 +18,7 @@ class BlanknoteApp : Application() {
 
     override fun onCreate() {
         super.onCreate()
-        if (BuildConfig.DEBUG)
+        if (BuildConfig.DEBUG) Timber.plant(Timber.DebugTree())
         AppCenter.start(
                 this,
                 this.resources.getString(R.string.app_center_id),

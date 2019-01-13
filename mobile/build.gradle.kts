@@ -114,9 +114,10 @@ dependencies {
     kapt(Depends.Room.roomCompiler)
     implementation(Depends.Room.roomCoroutines)
 
+    /*Image loading*/
+    implementation("com.squareup.picasso:picasso:2.71828")
     /*Logs*/
     implementation ("com.jakewharton.timber:timber:4.7.1")
-
     /*Utils*/
     implementation("com.sorinirimies:kotlin-ext:1.0.0")
 
