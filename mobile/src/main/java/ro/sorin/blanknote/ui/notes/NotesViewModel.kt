@@ -1,6 +1,5 @@
 package ro.sorin.blanknote.ui.notes
 
-import android.util.Log
 import androidx.lifecycle.MutableLiveData
 import kotlinx.coroutines.launch
 import ro.sorin.blanknote.api.NotesApi
@@ -8,6 +7,7 @@ import ro.sorin.blanknote.model.Note
 import ro.sorin.blanknote.utils.CoroutineViewModel
 import ro.sorin.blanknote.utils.notesRepository
 import ro.sorin.blanknote.utils.retrofit
+import timber.log.Timber
 
 
 class NotesViewModel : CoroutineViewModel() {
@@ -23,7 +23,7 @@ class NotesViewModel : CoroutineViewModel() {
                     notesLiveData.postValue(notes)
                 }
             } catch (e: Exception) {
-
+                Timber.tag(NotesViewModel::class.simpleName).e(e)
             }
         }
     }
