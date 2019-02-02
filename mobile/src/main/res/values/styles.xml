@@ -8,4 +8,27 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <style name="Blanknote" parent="AppTheme"/>
+
+    <style name="Blanknote.Facebook">
+        <item name="android:layout_width">@dimen/grid24</item>
+        <item name="android:layout_gravity">center_horizontal</item>
+        <item name="android:paddingLeft">@dimen/grid0_5</item>
+        <item name="android:textSize">@dimen/txt_size_m</item>
+        <item name="android:scaleType">fitStart</item>
+        <item name="android:layout_height">@dimen/grid6</item>
+        <item name="android:background">@drawable/states_button_facebook</item>
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
+    <style name="Blanknote.Google">
+        <item name="android:layout_width">@dimen/grid24</item>
+        <item name="android:layout_gravity">center_horizontal</item>
+        <item name="android:paddingLeft">@dimen/grid0_5</item>
+        <item name="android:textSize">@dimen/txt_size_m</item>
+        <item name="android:scaleType">fitStart</item>
+        <item name="android:layout_height">@dimen/grid6</item>
+        <item name="android:background">@drawable/states_button_google</item>
+        <item name="android:textColor">@android:color/white</item>
+    </style>
 </resources>

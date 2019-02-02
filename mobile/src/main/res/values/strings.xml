@@ -24,4 +24,7 @@
     </string>
     <string name="env_dev">Dev</string>
     <string name="env_prod">Prod</string>
+    <string name="logout_user">Logout</string>
+    <string name="login">Login</string>
+    <string name="sign_in_user">Sign in</string>
 </resources>
