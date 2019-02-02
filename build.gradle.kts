@@ -4,6 +4,7 @@ buildscript {
         google()
     }
     dependencies {
+        classpath(Depends.BuildPlugins.googleServicesPlugin)
         classpath(Depends.BuildPlugins.androidPlugin)
         classpath(Depends.BuildPlugins.kotlinPlugin)
     }
