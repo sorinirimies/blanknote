@@ -30,4 +30,8 @@ class SettingsFragment : PreferenceFragmentCompat(), SharedPreferences.OnSharedP
         super.onPause()
         preferenceScreen.sharedPreferences.unregisterOnSharedPreferenceChangeListener(this)
     }
+
+    companion object {
+        const val TAG_SETTINGS = "settings-fragment"
+    }
 }
