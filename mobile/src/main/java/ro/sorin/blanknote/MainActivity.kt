@@ -33,7 +33,7 @@ class MainActivity : AppCompatActivity() {
                             UserFragment.TAG_USER)
                 }
                 R.id.action_settings -> supportFragmentManager.transaction {
-                    replace(R.id.frag_container, SettingsFragment())
+                    replace(R.id.frag_container, SettingsFragment(), SettingsFragment.TAG_SETTINGS)
                 }
             }
             return@setOnNavigationItemSelectedListener true
