@@ -11,6 +11,7 @@ plugins {
     id("kotlin-android")
     id("org.jetbrains.kotlin.kapt")
     id("kotlin-android-extensions")
+    id("com.google.gms.google-services")
 }
 
 val versionName = Versions.Android.appVersionName
@@ -96,7 +97,7 @@ dependencies {
 
     /*Firestore*/
     implementation(Depends.Firebase.fireStore)
-
+    implementation(Depends.Firebase.firebaseCore)
     /*Network*/
     implementation(Depends.Network.retrofit2)
     implementation(Depends.Network.retrofit2CoroutinesAdapter)
@@ -104,6 +105,7 @@ dependencies {
 
     /*User auth*/
     implementation(Depends.Firebase.fireAuth)
+    implementation(Depends.PlayServices.authPlay)
     implementation(Depends.UserAuth.fbLogin)
     implementation(Depends.UserAuth.twitterLogin) {
         isTransitive = true
@@ -115,9 +117,11 @@ dependencies {
     implementation(Depends.Room.roomCoroutines)
 
     /*Image loading*/
-    implementation("com.squareup.picasso:picasso:2.71828")
+    implementation(Depends.Image.picasso)
+    implementation(Depends.Image.roundImage)
+
     /*Logs*/
-    implementation ("com.jakewharton.timber:timber:4.7.1")
+    implementation("com.jakewharton.timber:timber:4.7.1")
     /*Utils*/
     implementation("com.sorinirimies:kotlin-ext:1.0.0")
 
@@ -133,5 +137,5 @@ dependencies {
     androidTestImplementation(Depends.TestLibraries.espressoCore)
     testImplementation(Depends.TestLibraries.jUnit)
     testImplementation(Depends.Room.roomTest)
-
 }
+
