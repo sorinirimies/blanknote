@@ -3,6 +3,7 @@ object Depends {
     object BuildPlugins {
         const val androidPlugin = "com.android.tools.build:gradle:${Versions.gradlePluginVersion}"
         const val kotlinPlugin = "org.jetbrains.kotlin:kotlin-gradle-plugin:${Versions.kotlinVersion}"
+        const val googleServicesPlugin = "com.google.gms:google-services:${Versions.servicesVersion}"
     }
 
     object Android {
@@ -23,6 +24,11 @@ object Depends {
         const val appCenterCrashes = "com.microsoft.appcenter:appcenter-crashes:${Versions.appCenterVersion}"
     }
 
+    object Image {
+        const val roundImage = "com.makeramen:roundedimageview:${Versions.roundedImageVersion}"
+        const val picasso = "com.squareup.picasso:picasso:${Versions.picasso}"
+    }
+
     object Room {
         const val roomRuntime = "androidx.room:room-runtime:${Versions.roomVersion}"
         const val roomCompiler = "androidx.room:room-compiler:${Versions.roomVersion}"
@@ -35,7 +41,12 @@ object Depends {
         const val kotlinStdLib = "org.jetbrains.kotlin:kotlin-stdlib-jdk8:${Versions.kotlinVersion}"
     }
 
+    object PlayServices {
+        const val authPlay = "com.google.android.gms:play-services-auth:${Versions.playServAuthVersion}"
+    }
+
     object Firebase {
+        const val firebaseCore = "com.google.firebase:firebase-core:${Versions.firebaseCoreVersion}"
         const val fireStore = "com.google.firebase:firebase-firestore:${Versions.fireStoreVersion}"
         const val fireAuth = "com.google.firebase:firebase-auth:${Versions.fireaAuthVersion}"
     }

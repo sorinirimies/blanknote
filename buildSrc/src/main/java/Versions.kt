@@ -11,6 +11,8 @@ object Versions {
     const val kotlinVersion = "1.3.11"
     const val kotlinCoroutines = "1.1.1"
 
+    const val servicesVersion = "4.0.1"
+
     /*Android X*/
     const val gradlePluginVersion = "3.2.1"
     const val androidActivityVersion = "1.0.0-alpha01"
@@ -21,6 +23,7 @@ object Versions {
     const val lifecycleVersion = "2.0.0"
 
     /*Firebase*/
+    const val firebaseCoreVersion = "16.0.1"
     const val fireaAuthVersion = "16.0.5"
     const val fireStoreVersion = "17.1.2"
 
@@ -33,6 +36,12 @@ object Versions {
     /*User Auth*/
     const val facebookVersion = "[4,5)"
     const val twitterVersion = "3.3.0@aar"
+
+    const val playServAuthVersion = "16.0.1"
+
+    /* Images*/
+    const val roundedImageVersion = "2.3.0"
+    const val picasso = "2.71828"
 
     /*Network*/
     const val retrofit2Version = "2.4.0"
