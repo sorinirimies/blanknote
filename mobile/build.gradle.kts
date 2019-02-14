@@ -9,7 +9,7 @@ import com.android.build.gradle.internal.api.BaseVariantOutputImpl
 plugins {
     id("com.android.application")
     id("kotlin-android")
-    id("org.jetbrains.kotlin.kapt")
+    kotlin("kapt") version Depends.Kotlin.kotlinStdLib
     id("kotlin-android-extensions")
     id("com.google.gms.google-services")
 }
