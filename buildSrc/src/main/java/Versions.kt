@@ -1,34 +1,43 @@
 object Versions {
+
     object Android {
         const val compileSdkVersion = 28
         const val minSdkVersion = 22
         const val targetSdkVersion = 28
         const val appVersionCode = 1
         const val appVersionName = "1.0"
+        const val gradlePlugin = "3.4.1"
+    }
+
+    object AndroidX{
+        const val appCompat = "1.0.2"
+        const val archCore = "2.0.1"
+        const val constraintLayout = "1.1.3"
+        const val core = "1.0.1"
+        const val navigation = "2.0.0"
+        const val liveData = "2.0.0"
+        const val lifeCycle = "2.0.0"
+        const val activityX = "1.0.0"
+        const val support = "1.0.0"
+        const val material = "1.0.0"
+        const val ktxVersion = "1.0.0"
+        const val room = "2.1.0-rc01"
+        const val roomCoroutines = "2.1.0-alpha04"
     }
 
     /*Kotlin*/
-    const val kotlinVersion = "1.3.11"
-    const val kotlinCoroutines = "1.1.1"
+    const val kotlinVersion = "1.3.31"
+    const val kotlinCoroutines = "1.2.1"
 
     const val servicesVersion = "4.0.1"
 
-    /*Android X*/
-    const val gradlePluginVersion = "3.2.1"
-    const val androidActivityVersion = "1.0.0-alpha01"
-    const val androidSupportVersion = "1.0.0-rc01"
-    const val androidMaterialVersion = "1.0.0-rc01"
-    const val ktxVersion = "1.0.0"
-    const val constraintLayoutVersion = "2.0.0-alpha2"
-    const val lifecycleVersion = "2.0.0"
 
     /*Firebase*/
-    const val firebaseCoreVersion = "16.0.1"
-    const val fireaAuthVersion = "16.0.5"
-    const val fireStoreVersion = "17.1.2"
+    const val firebaseCoreVersion = "16.0.9"
+    const val fireaAuthVersion = "17.0.0"
+    const val fireStoreVersion = "19.0.1"
 
     /*Room*/
-    const val roomVersion = "2.1.0-alpha03"
 
     /*C.I.*/
     const val appCenterVersion = "1.10.0"
@@ -49,7 +58,7 @@ object Versions {
 
     /*Testing*/
     const val junitVersion = "4.12"
-    const val junitRunnerVersion = androidSupportVersion
+    const val junitRunnerVersion = Versions.AndroidX.support
     const val espressoCoreVersion = "3.1.0"
     const val mockkVersion = "1.8.12"
 }

@@ -1,22 +1,24 @@
 object Depends {
 
     object BuildPlugins {
-        const val androidPlugin = "com.android.tools.build:gradle:${Versions.gradlePluginVersion}"
+        const val androidPlugin = "com.android.tools.build:gradle:${Versions.Android.gradlePlugin}"
         const val kotlinPlugin = "org.jetbrains.kotlin:kotlin-gradle-plugin:${Versions.kotlinVersion}"
         const val googleServicesPlugin = "com.google.gms:google-services:${Versions.servicesVersion}"
     }
 
     object Android {
-        const val supportAnnotations = "androidx.annotation:annotation:${Versions.androidSupportVersion}"
-        const val supportAppCompat = "androidx.appcompat:appcompat:${Versions.androidSupportVersion}"
+        const val supportAnnotations = "androidx.annotation:annotation:${Versions.AndroidX.support}"
+        const val supportAppCompat = "androidx.appcompat:appcompat:${Versions
+                .AndroidX.appCompat}"
         const val lifecycleExt =
-                "androidx.lifecycle:lifecycle-extensions:${Versions.lifecycleVersion}"
+                "androidx.lifecycle:lifecycle-extensions:${Versions.AndroidX.lifeCycle}"
         const val lifecycleRuntime =
-                "androidx.lifecycle:lifecycle-runtime:${Versions.lifecycleVersion}"
-        const val ktxCore = "androidx.core:core-ktx:${Versions.ktxVersion}"
-        const val ktxFragment = "androidx.fragment:fragment-ktx:${Versions.ktxVersion}"
-        const val material = " com.google.android.material:material:${Versions.androidMaterialVersion}"
-        const val constraintLayout = "androidx.constraintlayout:constraintlayout:${Versions.constraintLayoutVersion}"
+                "androidx.lifecycle:lifecycle-runtime:${Versions.AndroidX.lifeCycle}"
+        const val ktxCore = "androidx.core:core-ktx:${Versions.AndroidX.ktxVersion}"
+        const val ktxFragment = "androidx.fragment:fragment-ktx:${Versions.AndroidX.ktxVersion}"
+        const val material = " com.google.android.material:material:${Versions.AndroidX.material}"
+        const val constraintLayout = "androidx.constraintlayout:constraintlayout:${Versions
+                .AndroidX.constraintLayout}"
     }
 
     object CI {
@@ -30,15 +32,15 @@ object Depends {
     }
 
     object Room {
-        const val roomRuntime = "androidx.room:room-runtime:${Versions.roomVersion}"
-        const val roomCompiler = "androidx.room:room-compiler:${Versions.roomVersion}"
-        const val roomCoroutines = "androidx.room:room-coroutines:${Versions.roomVersion}"
-        const val roomTest = "androidx.room:room-testing:${Versions.roomVersion}"
+        const val roomRuntime = "androidx.room:room-runtime:${Versions.AndroidX.room}"
+        const val roomCompiler = "androidx.room:room-compiler:${Versions.AndroidX.room}"
+        const val roomCoroutines = "androidx.room:room-coroutines:${Versions.AndroidX.roomCoroutines}"
+        const val roomTest = "androidx.room:room-testing:${Versions.AndroidX.room}"
     }
 
     object Kotlin {
         const val coroutines = "org.jetbrains.kotlinx:kotlinx-coroutines-core:${Versions.kotlinCoroutines}"
-        const val kotlinStdLib = "org.jetbrains.kotlin:kotlin-stdlib-jdk8:${Versions.kotlinVersion}"
+        const val kotlinStdLib = "org.jetbrains.kotlin:kotlin-stdlib:${Versions.kotlinVersion}"
     }
 
     object PlayServices {
