@@ -1,7 +1,3 @@
-import org.jetbrains.kotlin.config.KotlinCompilerVersion
-import com.android.build.gradle.BaseExtension
-import com.android.build.gradle.internal.dsl.DefaultConfig
-import org.gradle.kotlin.dsl.*
 import com.android.build.gradle.api.ApplicationVariant
 import com.android.build.gradle.api.BaseVariantOutput
 import com.android.build.gradle.internal.api.BaseVariantOutputImpl
@@ -9,7 +5,7 @@ import com.android.build.gradle.internal.api.BaseVariantOutputImpl
 plugins {
     id("com.android.application")
     id("kotlin-android")
-    kotlin("kapt") version Depends.Kotlin.kotlinStdLib
+    kotlin("kapt")
     id("kotlin-android-extensions")
     id("com.google.gms.google-services")
 }
@@ -20,8 +16,8 @@ android {
     compileSdkVersion(Versions.Android.compileSdkVersion)
 
     compileOptions {
-        setSourceCompatibility(JavaVersion.VERSION_1_8)
-        setTargetCompatibility(JavaVersion.VERSION_1_8)
+        sourceCompatibility = JavaVersion.VERSION_1_8
+        targetCompatibility = JavaVersion.VERSION_1_8
     }
 
     defaultConfig {
@@ -124,13 +120,6 @@ dependencies {
     implementation("com.jakewharton.timber:timber:4.7.1")
     /*Utils*/
     implementation("com.sorinirimies:kotlin-ext:1.0.0")
-
-    /*Jwt*/
-    implementation("io.jsonwebtoken:jjwt-api:0.10.5")
-    runtimeOnly("io.jsonwebtoken:jjwt-impl:0.10.5")
-    runtimeOnly("io.jsonwebtoken:jjwt-orgjson:0.10.5") {
-        exclude(group = "org.json", module = "json") //provided by Android natively
-    }
 
     /*Tests*/
     androidTestImplementation(Depends.TestLibraries.jUnitRunner)
