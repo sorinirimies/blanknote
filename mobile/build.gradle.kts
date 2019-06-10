@@ -91,6 +91,9 @@ dependencies {
     implementation(Depends.CI.appCenterAnalytics)
     implementation(Depends.CI.appCenterCrashes)
 
+    /*Phraseapp*/
+    implementation("com.github.phrase:android-sdk:1.1.2")
+
     /*Firestore*/
     implementation(Depends.Firebase.fireStore)
     implementation(Depends.Firebase.firebaseCore)

@@ -16,5 +16,6 @@ allprojects {
         google()
         maven { url = uri("https://dl.bintray.com/sorinirimies/greenlibs") }
         maven { url = uri("https://maven.google.com") }
+        maven { url = uri("https://jitpack.io/") }
     }
 }

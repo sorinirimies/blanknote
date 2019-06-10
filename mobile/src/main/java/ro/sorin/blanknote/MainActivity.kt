@@ -27,11 +27,11 @@ class MainActivity : AppCompatActivity() {
                             NotesFragment.newInstance(),
                             NotesFragment.TAG_NOTES)
                 }
-                R.id.action_user -> supportFragmentManager.transaction {
-                    replace(R.id.frag_container,
-                            UserFragment.newInstance(),
-                            UserFragment.TAG_USER)
-                }
+//                R.id.action_user -> supportFragmentManager.transaction {
+//                    replace(R.id.frag_container,
+//                            UserFragment.newInstance(),
+//                            UserFragment.TAG_USER)
+//                }
                 R.id.action_settings -> supportFragmentManager.transaction {
                     replace(R.id.frag_container, SettingsFragment(), SettingsFragment.TAG_SETTINGS)
                 }

@@ -1,0 +1,24 @@
+phraseapp:
+  access_token: a399278d51e154f5ad1bb20e6fee751a95be9acf4fdf143108419ffb7ecedd6c
+  file_format: xml
+  project_id: 3be76832316c805973fa2b46c0db1de4
+  pull:
+    targets:
+    - file: ./mobile/src/main/res/values-de/strings.xml
+      params:
+        tag: porsche-app-framework
+        locale_id: e1ce05a03c0a444c0c7d51fbf64abe28
+        format_options:
+          enclose_in_cdata: true
+          convert_placeholders: true
+    - file: ./mobile/src/main/res/values/strings.xml
+      params:
+        tag: porsche-app-framework
+        locale_id: 56bd36f53e2919a7aa21cd79eb04efc6
+        format_options:
+          enclose_in_cdata: true
+          convert_placeholders: true
+  push:
+    sources:
+    - file: ./mobile/src/main/res/values/strings.xml
+      params: {locale_id: 56bd36f53e2919a7aa21cd79eb04efc6}

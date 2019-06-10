@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "854386949832",
+    "firebase_url": "https://blanknote-cb258.firebaseio.com",
+    "project_id": "blanknote-cb258",
+    "storage_bucket": "blanknote-cb258.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:854386949832:android:22f672c9db915a3f",
+        "android_client_info": {
+          "package_name": "ro.sorin.blanknote"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "854386949832-10l5ido15fgstodteisqm25q5vnbd1s4.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "ro.sorin.blanknote",
+            "certificate_hash": "ba05c2cfe7d4102880861b3d26d9a48bd8939dd8"
+          }
+        },
+        {
+          "client_id": "854386949832-i5skclmv81p79vgnht6q6hj9knc02cta.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBVstd8iH3XkDrUTojPgBca07D5nb7AN2c"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "854386949832-i5skclmv81p79vgnht6q6hj9knc02cta.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
