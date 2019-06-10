@@ -14,11 +14,18 @@ phraseapp:
     - file: ./mobile/src/main/res/values/strings.xml
       params:
         tag: porsche-app-framework
-        locale_id: 56bd36f53e2919a7aa21cd79eb04efc6
+        locale_id: 92ecf85f6f7e8de937e63da7242a5a2b
+        format_options:
+          enclose_in_cdata: true
+          convert_placeholders: true
+    - file: ./mobile/src/main/res/values-de-rCH/strings.xml
+      params:
+        tag: porsche-app-framework
+        locale_id: b53cfd7d439fbc98e94a8d8f1db6ad36
         format_options:
           enclose_in_cdata: true
           convert_placeholders: true
   push:
     sources:
     - file: ./mobile/src/main/res/values/strings.xml
-      params: {locale_id: 56bd36f53e2919a7aa21cd79eb04efc6}
+      params: {locale_id: 3be76832316c805973fa2b46c0db1de4}

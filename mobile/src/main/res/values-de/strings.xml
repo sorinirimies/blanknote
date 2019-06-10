@@ -1,28 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <resources>
-    <string name="app_name">blanknote</string>
-    <string name="todo">ToDo</string>
-    <string name="user">Benutzer</string>
-    <string name="settings">Einstellungen</string>
-    <string name="sync_settings">Synchronizationseinstellungen</string>
-    <string name="notes">Notizen</string>
-    <string name="keep_lists_synced">Listen synchronisieren</string>
-    <string name="title_enable_suggestions">Empfhälungen einschalten</string>
-    <string name="environments">Umgebungen</string>
-    <string name="notification_settings">Benachrichtigungen Einstellungen</string>
-    <string name="new_group_name">Bitte einen name geben.</string>
-    <string name="new_note_name">Etwas schön schreiben...</string>
-    <string name="new_note">Neue Notiz</string>
     <string name="add_note">Notiz hinzufügen</string>
+    <string name="app_name">PAF_TestApp</string>
     <string name="cancel">Abbbrechen</string>
-    <string name="delete_note_label">Bist du sicher das du es löschen möchtest?</string>
     <string name="delete_note">Löschen</string>
-    <string name="edit_note_label">Meinung geändert ?</string>
+    <string name="delete_note_label">Bist du sicher das du es löschen möchtest?</string>
     <string name="edit_note">Ändern</string>
-    <string name="switch_environments">Umgebungen tauschen</string>
-    <string name="switch_environments_summary">Durch die Eintwicklereinstellungen kannst du die Umgebungen tauschen</string>
+    <string name="edit_note_label">Meinung geändert ?</string>
+    <string name="environments">Umgebungen</string>
     <string name="env_dev">Dev</string>
     <string name="env_prod">Prod</string>
-    <string name="logout_user">Ausloggen</string>
+    <string name="keep_lists_synced">Listen synchronisieren</string>
     <string name="login">Login</string>
+    <string name="logout_user">Ausloggen</string>
+    <string name="new_group_name">Bitte einen name geben.</string>
+    <string name="new_note">Neue Notiz</string>
+    <string name="new_note_name">Etwas schön schreiben...</string>
+    <string name="notes">Notizen</string>
+    <string name="notification_settings">Benachrichtigungen Einstellungen</string>
+    <string name="settings">Einstellungen</string>
     <string name="sign_in_user">Einloggen</string>
+    <string name="switch_environments">Umgebungen tauschen</string>
+    <string name="switch_environments_summary">Durch die Eintwicklereinstellungen kannst du die Umgebungen tauschen</string>
+    <string name="sync_settings">Synchronizationseinstellungen</string>
+    <string name="title_enable_suggestions">Empfhälungen einschalten</string>
+    <string name="todo">ToDo</string>
+    <string name="user">Benutzer</string>
 </resources>

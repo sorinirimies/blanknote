@@ -24,18 +24,18 @@
 
     <PreferenceCategory
         app:key="help_category"
-        app:title="Help">
+        app:title="@string/help">
 
         <Preference
             app:key="feedback"
             app:summary="Report technical issues or suggest new features"
-            app:title="Send feedback" />
+            app:title="@string/send_feeback" />
 
     </PreferenceCategory>
 
     <PreferenceCategory
         app:key="developer_settings_category"
-        app:title="Developer Settings">
+        app:title="@string/developer_settings">
 
         <ListPreference
             app:dialogTitle="@string/switch_environments"

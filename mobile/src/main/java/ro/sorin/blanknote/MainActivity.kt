@@ -1,12 +1,17 @@
 package ro.sorin.blanknote
 
+import android.content.Context
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.transaction
+import com.phraseapp.android.sdk.PhraseApp
 import kotlinx.android.synthetic.main.activity_main.*
 import ro.sorin.blanknote.ui.notes.NotesFragment
 import ro.sorin.blanknote.ui.settings.SettingsFragment
 import ro.sorin.blanknote.ui.user.UserFragment
+import com.phraseapp.android.sdk.TranslationsSyncCallback
+import timber.log.Timber
+
 
 class MainActivity : AppCompatActivity() {
 
@@ -38,5 +43,19 @@ class MainActivity : AppCompatActivity() {
             }
             return@setOnNavigationItemSelectedListener true
         }
+        PhraseApp.updateTranslations(object : TranslationsSyncCallback {
+            override fun onSuccess(translationsChanged: Boolean) {
+                Timber.w("Translations updated!")
+                Timber.w("Did translations change? $translationsChanged")
+
+            }
+
+            override fun onFailure() {
+                Timber.e("Translations failed to update!")
+            }
+        })
+    }
+   override fun attachBaseContext(newBase: Context) {
+        super.attachBaseContext(PhraseApp.wrap(newBase))
     }
 }
