@@ -24,7 +24,7 @@ android {
     minSdkVersion(Versions.Android.minSdkVersion)
     targetSdkVersion(Versions.Android.targetSdkVersion)
     testInstrumentationRunner = "android.support.test.runner.AndroidJUnitRunner"
-    version = Versions.Android.appVersionCode
+    versionCode = Versions.Android.appVersionCode
     versionName = appVersionName
   }
 
