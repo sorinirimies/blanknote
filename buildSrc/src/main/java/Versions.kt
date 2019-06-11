@@ -5,7 +5,7 @@ object Versions {
         const val minSdkVersion = 22
         const val targetSdkVersion = 28
         const val appVersionCode = 1
-        const val appVersionName = "0.0.2"
+        const val appVersionName = "1.0.1"
         const val gradlePlugin = "3.4.1"
     }
 
