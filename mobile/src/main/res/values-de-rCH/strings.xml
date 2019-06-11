@@ -1,4 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <resources>
     <string name="app_name">PAF_TestApp</string>
+    <string name="help">Hilfe</string>
+    <!-- Send Feedback -->
+    <string name="send_feeback">Test</string>
 </resources>

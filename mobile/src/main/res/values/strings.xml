@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <resources>
     <string name="add_note">Add note</string>
-    <string name="app_name">PAF_TestApp</string>
+    <string name="app_name">PAF_Notes</string>
     <string name="cancel">Cancel</string>
     <string name="delete_note">Delete</string>
     <string name="delete_note_label">Are you sure you want to delete it?</string>
@@ -11,7 +11,8 @@
     <string name="environments">Environments</string>
     <string name="env_dev">Dev</string>
     <string name="env_prod">Prod</string>
-    <string name="keep_lists_synced">Keep lists synced</string>
+    <string name="help">Help</string>
+    <string name="keep_lists_synced">Lists synced</string>
     <string name="login">Login</string>
     <string name="logout_user">Logout</string>
     <string name="new_group_name">Please name your new shopping list.</string>

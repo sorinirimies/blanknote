@@ -5,12 +5,14 @@
     <string name="cancel">Abbbrechen</string>
     <string name="delete_note">Löschen</string>
     <string name="delete_note_label">Bist du sicher das du es löschen möchtest?</string>
+    <string name="developer_settings">Entwicklereinstellungen</string>
     <string name="edit_note">Ändern</string>
     <string name="edit_note_label">Meinung geändert ?</string>
     <string name="environments">Umgebungen</string>
     <string name="env_dev">Dev</string>
     <string name="env_prod">Prod</string>
-    <string name="keep_lists_synced">Listen synchronisieren</string>
+    <string name="help">Hilfe beantragen</string>
+    <string name="keep_lists_synced">Listen synchronisiert halten</string>
     <string name="login">Login</string>
     <string name="logout_user">Ausloggen</string>
     <string name="new_group_name">Bitte einen name geben.</string>
@@ -18,6 +20,8 @@
     <string name="new_note_name">Etwas schön schreiben...</string>
     <string name="notes">Notizen</string>
     <string name="notification_settings">Benachrichtigungen Einstellungen</string>
+    <!-- Send Feedback -->
+    <string name="send_feeback">Feedback senden</string>
     <string name="settings">Einstellungen</string>
     <string name="sign_in_user">Einloggen</string>
     <string name="switch_environments">Umgebungen tauschen</string>

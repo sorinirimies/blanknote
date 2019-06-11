@@ -16,7 +16,7 @@
         app:title="@string/sync_settings">
 
         <SwitchPreferenceCompat
-            app:defaultValue=""
+            app:defaultValue="Sync"
             app:key="switch_sync_lists_preference"
             app:title="@string/keep_lists_synced" />
 
